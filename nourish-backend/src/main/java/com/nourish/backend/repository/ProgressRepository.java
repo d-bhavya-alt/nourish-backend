@@ -1,0 +1,11 @@
+package com.nourish.backend.repository;
+
+import com.nourish.backend.entity.Progress;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ProgressRepository extends JpaRepository<Progress, Long> {
+
+    List<Progress> findByUserId(Long userId);
+}
